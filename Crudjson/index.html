@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Responsivo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="light">
+    <header>
+        <h1>CRUD JSON com Modo Escuro</h1>
+        <button id="darkModeToggle">Modo Escuro</button>
+    </header>
+
+    <main>
+        <button id="toggleForm">Adicionar</button>
+        <form id="userForm" style="display: none;">
+            <input type="text" id="name" placeholder="Nome" required>
+            <input type="tel" id="phone" placeholder="Telefone" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Adicionar Usuário</button>
+        </form>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="editModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button" id="closeModal">&times;</span>
+                <h2>Editar Usuário</h2>
+                <form id="editForm">
+                    <input type="text" id="editName" placeholder="Nome" required>
+                    <input type="tel" id="editPhone" placeholder="Telefone" required>
+                    <input type="email" id="editEmail" placeholder="Email" required>
+                    <button type="submit">Salvar Alterações</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-credits">
+            Verificado por Sergio BNE | Mantido por Bruno
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
